@@ -1,0 +1,16 @@
+<%- include ("partials/nav_bar.ejs") %>
+
+<div id="main_section">
+    <div class="heading_title audiowide-regular">
+        <p>Create a Post</p>
+    </div>
+    <form action="/account/post" method="POST">
+        <label for="title" class="title_label">Title</label><br>
+        <input type="text" name="title" placeholder="Enter the post title" class="title_text"><br>
+        <label for="text" class="text_label">Post</label><br>
+        <textarea name="post" placeholder="Enter the post content" class="text_text"></textarea><br>
+        <input type="submit" value="Post" class="submit_button">
+    </form>
+</div>
+
+<%- include ("partials/footer.ejs") %>

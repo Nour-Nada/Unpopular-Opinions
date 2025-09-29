@@ -1,0 +1,21 @@
+<%- include ("partials/nav_bar.ejs") %>
+
+<div id="main_section">
+    <%WebsitePosts.forEach((post)=> { %>
+        <div class="post_div">
+          <h1><%=post.title%></h1>
+          <p><small><%=post.author%></small></p>
+          <p><%=post.text%></p>
+        </div>
+    <%}) %>
+    <%UserPosts.forEach((post)=> { %>
+        <div class="post_div">
+          <h1><%=post.title%></h1>
+          <p><small><%=post.author%></small></p>
+          <p><%=post.text%></p>
+        </div>
+    <%}) %>
+</div>
+
+
+<%- include ("partials/footer.ejs") %>

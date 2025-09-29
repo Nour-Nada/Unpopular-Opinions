@@ -1,0 +1,21 @@
+<%- include ("partials/nav_bar.ejs") %>
+
+<div id="main_section">
+    <div class="heading_title audiowide-regular">
+        <p>My Posts</p>
+    </div>
+    <%UserPosts.forEach((post, index)=> { %>
+        <div class="post_div">
+          <h1><%=post.title%></h1>
+          <p><small><%=post.author%></small></p>
+          <div class="post_button">
+            <form action="/account/delete/<%=index%>" method="POST"><button type="submit" name="delete" style="margin-left: 0vw;"><img src="\icons\trash.png" alt="Delete Icon" class="post_icons"></button></form>
+            <form action="/account/edit/<%=index%>" method="POST"><button type="submit" name="edit"><img src="\icons\edit.png" alt="Delete Icon" class="post_icons"></button></form>
+          </div>
+          <p><%=post.text%></p>
+        </div>
+    <%}) %>
+</div>
+
+
+<%- include ("partials/footer.ejs") %>

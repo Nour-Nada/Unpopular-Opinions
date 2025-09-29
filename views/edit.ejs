@@ -1,0 +1,16 @@
+<%- include ("partials/nav_bar.ejs") %>
+
+<div id="main_section">
+    <div class="heading_title audiowide-regular">
+        <p>Edit a Post</p>
+    </div>
+    <form action="/account/edit/done/<%=currIndex%>" method="POST">
+        <label for="title" class="title_label">Edit Title</label><br>
+        <input type="text" name="title" value="<%=currPostTitle%>" class="title_text"><br>
+        <label for="text" class="text_label">Edit Post</label><br>
+        <textarea name="post" class="text_text"><%=currPostText%></textarea><br>
+        <input type="submit" value="Confirm" class="submit_button">
+    </form>
+</div>
+
+<%- include ("partials/footer.ejs") %>
